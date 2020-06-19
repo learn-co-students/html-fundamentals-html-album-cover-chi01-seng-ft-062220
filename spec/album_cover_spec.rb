@@ -22,7 +22,7 @@ RSpec.describe 'HTML Album Cover' do
         expect(back_cover.children.select {|ch| ch.name == "h3"}[0].children.first.text).to include("FROM DESPICABLE ME"), "An 'h3' tag should contain the text 'FROM DESPICABLE ME'"
 
         expect(back_cover.children.any? {|ch| ch.name == "h1"}).to be == true, "No 'h1' tag found"
-        expect(back_cover.children.select {|ch| ch.name == "h1"}.first.children.first.text).to be == "HAPPY", "The `h1` tag should include the text 'HAPPY'"
+        expect(back_cover.children.select {|ch| ch.name == "h1"}.first.children.first.text).to be == "HAPPY", "The `h1` tag should include the text 'HAPPY'
 
         expect(back_cover.children.select {|ch| ch.name == "h3"}[1].children.first.text).to include("WRITTEN BY"), "A second 'h3' tag should contain the text 'WRITTEN BY' (remaining text optional)"
 
